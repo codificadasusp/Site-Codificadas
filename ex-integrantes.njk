@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: "Ex-integrantes"
+permalink: "/o-projeto/ex-integrantes/index.html"
+---
+<div class="page-header">
+  <div class="container">
+    <h1>Ex-integrantes</h1>
+    <p>As alunas e alunos que construíram o CodificADAs ao longo dos anos.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container secao-layout">
+    <header class="secao-cabecalho">
+      <p class="eyebrow">Obrigada!</p>
+      <h2>Quem passou por aqui</h2>
+    </header>
+
+    <div class="secao-corpo">
+      <p>Cada turma do projeto foi construída por gente que dedicou seu tempo a ensinar programação para meninas do Ensino Médio. Estes são os nomes de quem esteve na equipe em cada período.</p>
+
+      {% for grupo in exIntegrantes.grupos %}
+      <div class="turma">
+        <h3 class="turma-periodo">{{ grupo.periodo }}</h3>
+        <ul class="turma-lista">
+          {% for pessoa in grupo.pessoas %}
+          <li class="pessoa-card">
+            <span class="pessoa-inicial" aria-hidden="true">{{ pessoa.nome | first }}</span>
+            <span class="pessoa-dados">
+              <span class="pessoa-nome">{{ pessoa.nome }}</span>
+              {% if pessoa.curso %}<span class="pessoa-curso">{{ pessoa.curso }}</span>{% endif %}
+              {% if pessoa.link %}<a class="pessoa-link" href="{{ pessoa.link }}" target="_blank" rel="noopener">Perfil &rarr;</a>{% endif %}
+            </span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+
+      <p><a href="/o-projeto/#equipe">&larr; Voltar para a equipe atual</a></p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/pagina.njk",
+  "permalink": "/arquivo/{{ slug }}/index.html"
+}

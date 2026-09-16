@@ -1,0 +1,71 @@
+[
+  { "title": "Início", "url": "/" },
+  {
+    "title": "Aprenda a programar",
+    "url": "/aprenda-a-programar/",
+    "children": [
+      {
+        "title": "Por quê?",
+        "url": "/aprenda-a-programar/#por-que",
+        "descricao": "O que faz uma pessoa que programa, e por que essa área pode ser para você."
+      },
+      {
+        "title": "Como?",
+        "url": "/aprenda-a-programar/#como",
+        "descricao": "Os cursos que já passaram pelo projeto e por onde dá para começar hoje."
+      },
+      {
+        "title": "Onde e quando?",
+        "url": "/aprenda-a-programar/#onde-e-quando",
+        "descricao": "Quando abrem as turmas, onde acontecem e quem pode participar."
+      },
+      {
+        "title": "Plataforma (acesso rápido)",
+        "url": "/aprenda-a-programar/#plataforma",
+        "descricao": "Onde ficam os materiais do curso e como conseguir acesso."
+      }
+    ]
+  },
+  {
+    "title": "O projeto",
+    "url": "/o-projeto/",
+    "children": [
+      {
+        "title": "Sobre o projeto",
+        "url": "/o-projeto/#sobre",
+        "descricao": "Quem somos, o que fazemos e por que o projeto existe."
+      },
+      {
+        "title": "Equipe",
+        "url": "/o-projeto/#equipe",
+        "descricao": "As professoras e alunas que fazem o CodificADAs acontecer."
+      },
+      {
+        "title": "Projetos correlatos",
+        "url": "/o-projeto/#parcerias",
+        "descricao": "Outras iniciativas que caminham junto com a gente."
+      },
+      {
+        "title": "Contato",
+        "url": "/o-projeto/#contato",
+        "descricao": "Nossos endereços, e-mail e redes sociais."
+      }
+    ]
+  },
+  {
+    "title": "Blog",
+    "url": "/blog/",
+    "children": [
+      {
+        "title": "Posts do blog",
+        "url": "/blog/",
+        "descricao": "Histórias, dicas e novidades sobre meninas na Computação."
+      },
+      {
+        "title": "Edições anteriores",
+        "url": "/blog/edicoes-anteriores/",
+        "descricao": "As turmas que já aconteceram e o conteúdo de cada uma."
+      }
+    ]
+  }
+]

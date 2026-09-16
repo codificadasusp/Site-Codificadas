@@ -1,0 +1,197 @@
+---
+layout: layouts/base.njk
+title: "O projeto"
+permalink: "/o-projeto/index.html"
+---
+<div class="page-header">
+  <div class="container">
+    <h1>O projeto</h1>
+    <p>Um projeto de extensão do IME-USP para levar a Computação a mais meninas.</p>
+  </div>
+</div>
+
+<nav class="sub-nav" aria-label="Seções desta página">
+  <div class="container">
+    <ul>
+      <li><a href="#sobre">Sobre o projeto</a></li>
+      <li><a href="#equipe">Equipe</a></li>
+      <li><a href="#parcerias">Projetos correlatos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ---------------- SOBRE ---------------- -->
+<section class="section secao-ancora" id="sobre">
+  <div class="container secao-layout">
+    <header class="secao-cabecalho">
+      <p class="eyebrow">01 &middot; Sobre o projeto</p>
+      <h2>Quem somos</h2>
+    </header>
+
+    <div class="secao-corpo">
+      <p>O CodificADAs é um projeto de extensão que desenvolve atividades de ensino e divulgação da Computação para alunas de escolas públicas, com o objetivo de promover a inclusão feminina nos cursos superiores de Computação e ajudar a combater a desigualdade de gênero na área.</p>
+
+      <p>O projeto é liderado por professoras e estudantes do <a href="https://www.ime.usp.br/" target="_blank" rel="noopener">Instituto de Matemática e Estatística</a> (IME) da <a href="https://www5.usp.br/" target="_blank" rel="noopener">Universidade de São Paulo</a>, na Cidade Universitária, no Butantã.</p>
+
+      <h3>O que fazemos</h3>
+
+      <ul class="passos">
+        <li>Confeccionamos e disponibilizamos materiais sobre Computação, seus cursos de graduação e suas carreiras, pensados para a faixa etária das alunas.</li>
+        <li>Oferecemos cursos de introdução à programação de curta duração.</li>
+        <li>Promovemos atividades educativas — oficinas, dinâmicas, palestras e hackathons — que engajam as alunas no aprendizado de Computação.</li>
+        <li>Apresentamos as oportunidades de carreira da área em palestras com ex-alunas da USP com atuação destacada no mercado.</li>
+      </ul>
+
+      <div class="aviso">
+        <span class="aviso-emblema" aria-hidden="true"></span>
+        <div>
+          <p><strong>Financiamento</strong></p>
+          <p>O projeto é financiado pela <a href="https://prg.usp.br/" target="_blank" rel="noopener">Pró-Reitoria de Graduação</a> (PRG) da USP, sob o Edital PRG 01/2020-2021 — Consórcios Acadêmicos para a Excelência do Ensino de Graduação (CAEG). Nosso agradecimento à PRG!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- EQUIPE ---------------- -->
+<section class="section section-alt secao-ancora" id="equipe">
+  <div class="container secao-layout">
+    <header class="secao-cabecalho">
+      <p class="eyebrow">02 &middot; Equipe</p>
+      <h2>Quem faz acontecer</h2>
+    </header>
+
+    <div class="secao-corpo">
+      <div class="equipe-coordenacao">
+        <img class="team-photo" src="{{ equipe.coordenadora.foto }}" alt="{{ equipe.coordenadora.nome }}" loading="lazy" eleventy:formats="webp,jpeg" eleventy:widths="300,600" sizes="190px">
+        <div>
+          <p class="eyebrow">Coordenadora</p>
+          <p class="team-name">{{ equipe.coordenadora.nome }}</p>
+          <p class="team-role">{{ equipe.coordenadora.papel }}</p>
+          <a href="{{ equipe.coordenadora.link.url }}" target="_blank" rel="noopener">{{ equipe.coordenadora.link.label }}</a>
+        </div>
+      </div>
+
+      <h3>Alunas integrantes</h3>
+
+      <div class="team-grid">
+        {% for aluna in equipe.alunas %}
+        <div class="team-card">
+          {% if aluna.foto %}
+          <img class="team-photo" src="{{ aluna.foto }}" alt="{{ aluna.nome }}" loading="lazy" eleventy:formats="webp,jpeg" eleventy:widths="300,600" sizes="190px">
+          {% else %}
+          <span class="team-photo team-photo-vazia" aria-hidden="true"></span>
+          {% endif %}
+          <p class="team-name">{{ aluna.nome }}</p>
+          <p class="team-role">{{ aluna.papel }}</p>
+          {% if aluna.linkedin %}
+          <a href="{{ aluna.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+      <h3>Agradecimentos</h3>
+
+      <p>O CodificADAs não teria chegado até aqui sem as professoras que ajudaram a construir o projeto ao longo dos anos. Nosso obrigada a elas:</p>
+
+      <ul class="agradecimentos">
+        {% for prof in equipe.agradecimentos.professoras %}
+        <li class="agradecimento-card">
+          <span class="agradecimento-nome">{{ prof.nome }}</span>
+          {% if prof.link %}<a class="agradecimento-link" href="{{ prof.link }}" target="_blank" rel="noopener">Lattes &rarr;</a>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+
+      <p><a href="{{ equipe.exIntegrantesUrl }}">Conheça as integrantes de anos anteriores &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- PROJETOS CORRELATOS ---------------- -->
+<section class="section secao-ancora" id="parcerias">
+  <div class="container secao-layout">
+    <header class="secao-cabecalho">
+      <p class="eyebrow">03 &middot; Projetos correlatos</p>
+      <h2>Quem caminha junto</h2>
+    </header>
+
+    <div class="secao-corpo">
+      <p>Outras iniciativas que também trabalham para aproximar meninas e mulheres da Computação e da ciência:</p>
+
+      <ul class="cursos">
+        <li class="curso-card">
+          <span class="curso-faixa" aria-hidden="true"></span>
+          <div class="curso-corpo">
+            <h4>Grupo de comput{ação social} da USP</h4>
+            <p>O TECS leva a computação para ações de impacto social.</p>
+            <a class="curso-link" href="https://tecs.ime.usp.br/" target="_blank" rel="noopener">Conhecer &rarr;</a>
+          </div>
+        </li>
+        <li class="curso-card">
+          <span class="curso-faixa" aria-hidden="true"></span>
+          <div class="curso-corpo">
+            <h4>GaRotAs em Computação e Empreendedorismo</h4>
+            <p>Aproxima meninas da computação e do empreendedorismo.</p>
+            <a class="curso-link" href="http://each.uspnet.usp.br/petsi/grace/" target="_blank" rel="noopener">Conhecer &rarr;</a>
+          </div>
+        </li>
+        <li class="curso-card">
+          <span class="curso-faixa" aria-hidden="true"></span>
+          <div class="curso-corpo">
+            <h4>Lab das Minas</h4>
+            <p>Promove a participação feminina na tecnologia.</p>
+            <a class="curso-link" href="https://linktr.ee/labdasminas" target="_blank" rel="noopener">Conhecer &rarr;</a>
+          </div>
+        </li>
+        <li class="curso-card">
+          <span class="curso-faixa" aria-hidden="true"></span>
+          <div class="curso-corpo">
+            <h4>Vai ter Menina na Ciência</h4>
+            <p>Incentiva meninas a seguirem carreiras científicas.</p>
+            <a class="curso-link" href="http://meninaciencia.each.webhostusp.sti.usp.br/" target="_blank" rel="noopener">Conhecer &rarr;</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- CONTATO ---------------- -->
+<section class="section section-alt secao-ancora" id="contato">
+  <div class="container secao-layout">
+    <header class="secao-cabecalho">
+      <p class="eyebrow">04 &middot; Contato</p>
+      <h2>Fale com a gente</h2>
+    </header>
+
+    <div class="secao-corpo">
+      <p>Quer saber mais sobre o projeto, tirar uma dúvida ou levar o CodificADAs para a sua escola? Escreva para <a href="mailto:codificadas@usp.br">codificadas@usp.br</a>.</p>
+
+      <h3>Onde estamos</h3>
+
+      <ul class="destaques">
+        <li class="destaque">
+          <span class="destaque-rotulo">IME-USP &middot; Butantã</span>
+          <strong>Instituto de Matemática e Estatística</strong>
+          <span>Rua do Matão, 1010 — Cidade Universitária<br>CEP 05508-090 — Butantã, São Paulo, SP</span>
+        </li>
+      </ul>
+
+      <h3>Nas redes sociais</h3>
+
+      <p>Acompanhe o projeto como <strong>@codificadasusp</strong> — é por lá que anunciamos a abertura das turmas.</p>
+
+      <div class="social-links social-links-claro">
+        <a href="https://www.instagram.com/codificadasusp/" target="_blank" rel="noopener" aria-label="Instagram do CodificADAs">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://www.facebook.com/codificADAsUSP/" target="_blank" rel="noopener" aria-label="Facebook do CodificADAs">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.3-1.5 1.6-1.5H16.5V4.2C16.2 4.1 15.2 4 14 4c-2.4 0-4 1.5-4 4.2V10.5H7.5v3H10V21h3.5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

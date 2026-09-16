@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+title: "Blog"
+permalink: "/blog/index.html"
+---
+<div class="page-header">
+  <div class="container">
+    <h1>Blog</h1>
+    <p>Histórias, dicas e novidades sobre meninas e mulheres na Computação.</p>
+  </div>
+</div>
+
+<nav class="sub-nav" aria-label="Seções do blog">
+  <div class="container">
+    <ul>
+      <li><a href="/blog/">Posts do blog</a></li>
+      <li><a href="/blog/edicoes-anteriores/">Edições anteriores</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {% for post in collections.blogGeral %}
+      {% include "partials/post-card.njk" %}
+      {% endfor %}
+    </div>
+
+    <p class="section-footer-link">
+      Procurando um curso específico? <a href="/blog/edicoes-anteriores/">Veja as edições anteriores &rarr;</a>
+    </p>
+  </div>
+</section>

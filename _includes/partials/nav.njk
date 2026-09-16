@@ -1,0 +1,26 @@
+<nav class="main-nav" aria-label="Menu principal">
+  <ul>
+    {% for item in nav %}
+    {# marca o item da página atual: exato para o Início, por prefixo nos demais #}
+    {% set ehAtual = (item.url == "/" and page.url == "/") or (item.url != "/" and page.url.indexOf(item.url) == 0) %}
+    <li class="{% if item.children %}nav-item-has-children{% endif %}{% if ehAtual %} is-current{% endif %}">
+      <a href="{{ item.url }}"{% if ehAtual %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% if item.children %}
+      <button type="button" class="nav-caret-btn" aria-expanded="false" aria-label="Abrir submenu {{ item.title }}">
+        <span class="nav-caret" aria-hidden="true">&#9662;</span>
+      </button>
+      <ul class="nav-submenu">
+        {% for child in item.children %}
+        <li>
+          <a href="{{ child.url }}">
+            <span class="nav-submenu-titulo">{{ child.title }}</span>
+            {% if child.descricao %}<span class="nav-submenu-desc">{{ child.descricao }}</span>{% endif %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

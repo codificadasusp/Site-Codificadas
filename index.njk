@@ -1,0 +1,112 @@
+---
+layout: layouts/base.njk
+title: "Início"
+---
+<section class="hero">
+  <span class="hero-blob hero-blob-1" aria-hidden="true"></span>
+  <span class="hero-blob hero-blob-2" aria-hidden="true"></span>
+
+  <div class="container hero-content">
+    <img class="hero-emblem" src="/assets/img/logo/emblem-color.png" alt="" loading="eager" sizes="120px" eleventy:widths="120,240,360" eleventy:formats="webp,png">
+
+    <h1 class="sr-only">CodificADAs</h1>
+    <p class="hero-title" data-scramble="CodificADAs" aria-hidden="true">CodificADAs</p>
+
+    <p class="hero-tagline">Inserindo meninas no mundo da programação.</p>
+
+    <div class="hero-actions">
+      <a class="btn" href="/aprenda-a-programar/">Aprenda a programar</a>
+      <a class="btn btn-outline" href="/o-projeto/">Conheça o projeto</a>
+    </div>
+
+    <ul class="hero-fatos">
+      <li><strong>60</strong> vagas por edição</li>
+      <li><strong>100%</strong> gratuito</li>
+      <li><strong>IME-USP</strong> presencial</li>
+    </ul>
+  </div>
+
+  <a class="hero-rolar" href="#destaques" aria-label="Ver mais">
+    <span aria-hidden="true">&darr;</span>
+  </a>
+</section>
+
+<!-- o que o projeto oferece -->
+<section class="section" id="destaques">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Cursos</p>
+      <h2>Por onde você pode começar</h2>
+      <p>Todos os nossos cursos são de introdução, presenciais e gratuitos — não é preciso saber nada antes.</p>
+    </div>
+
+    <div class="card-grid">
+      <a class="destaque-card" href="/aprenda-a-programar/#como">
+        <span class="destaque-card-num" aria-hidden="true">&lt;/&gt;</span>
+        <h3>Os cursos</h3>
+        <p>Scratch, Python, Programação Web e Design de Experiência do Usuário — as portas de entrada que já passaram pelo projeto.</p>
+        <span class="destaque-card-link">Ver os cursos &rarr;</span>
+      </a>
+      <a class="destaque-card" href="/aprenda-a-programar/#onde-e-quando">
+        <span class="destaque-card-num" aria-hidden="true">{ }</span>
+        <h3>Onde e quando</h3>
+        <p>As turmas acontecem nas férias de janeiro e julho, no laboratório de computação do IME-USP, no Butantã.</p>
+        <span class="destaque-card-link">Ver as datas &rarr;</span>
+      </a>
+      <a class="destaque-card" href="/o-projeto/">
+        <span class="destaque-card-num" aria-hidden="true">10</span>
+        <h3>O projeto</h3>
+        <p>Quem somos, a equipe por trás das turmas e por que trabalhamos para levar a Computação a mais meninas.</p>
+        <span class="destaque-card-link">Conhecer o projeto &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Do blog</p>
+      <h2>Para você se manter informada</h2>
+      <p>Histórias de mulheres na Computação, dicas para começar e o que está acontecendo no projeto.</p>
+    </div>
+    <div class="card-grid">
+      {% set tagOverride = "Blog" %}
+      {% for post in collections.blogHome %}
+      {% include "partials/post-card.njk" %}
+      {% endfor %}
+    </div>
+    <p class="section-footer-link"><a href="/blog/">Ver todos os posts &rarr;</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Edições anteriores</p>
+      <h2>As turmas que já passaram por aqui</h2>
+      <p>Cada edição tem seu conteúdo, materiais e informações — dá para ver como foram as turmas anteriores.</p>
+    </div>
+    <div class="card-grid">
+      {% set tagOverride = "Edição anterior" %}
+      {% for post in collections.edicoesHome %}
+      {% include "partials/post-card.njk" %}
+      {% endfor %}
+    </div>
+    <p class="section-footer-link"><a href="/blog/edicoes-anteriores/">Ver todas as edições &rarr;</a></p>
+  </div>
+</section>
+
+<!-- chamada final -->
+<section class="chamada">
+  <div class="container chamada-conteudo">
+    <div>
+      <h2>Quer participar da próxima turma?</h2>
+      <p>As inscrições são anunciadas aqui no site e nas nossas redes sociais. Acompanhe para não perder.</p>
+    </div>
+    <div class="chamada-acoes">
+      <a class="btn" href="/blog/">Ver o blog</a>
+      <a class="btn btn-outline" href="/o-projeto/#contato">Falar com a gente</a>
+    </div>
+  </div>
+</section>

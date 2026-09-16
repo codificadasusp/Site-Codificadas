@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: "Edições anteriores"
+permalink: "/blog/edicoes-anteriores/index.html"
+---
+<div class="page-header">
+  <div class="container">
+    <h1>Edições anteriores</h1>
+    <p>As turmas que já aconteceram, com o conteúdo e as informações de cada uma.</p>
+  </div>
+</div>
+
+<nav class="sub-nav" aria-label="Seções do blog">
+  <div class="container">
+    <ul>
+      <li><a href="/blog/">Posts do blog</a></li>
+      <li><a href="/blog/edicoes-anteriores/">Edições anteriores</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {% set tagOverride = "Edição anterior" %}
+      {% for post in collections.edicoes %}
+      {% include "partials/post-card.njk" %}
+      {% endfor %}
+    </div>
+
+    <p class="section-footer-link">
+      A próxima turma ainda não tem data. <a href="/aprenda-a-programar/#onde-e-quando">Saiba como ficar sabendo &rarr;</a>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <div class="post-banner"{% if imagem %} style="background-image: url('{{ imagem | bannerOtimizado }}');"{% endif %}>
+    <div class="container">
+      <p class="post-date">{{ date | dataBr }}</p>
+      <h1>{{ title }}</h1>
+      {% if categorias %}
+      <div class="post-categorias">
+        {% for cat in categorias %}
+        <span class="tag-pill">{{ cat }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="post-body">
+    <div class="container prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>

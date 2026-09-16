@@ -1,0 +1,17 @@
+{
+  "name": "codificadas-site",
+  "version": "1.0.0",
+  "description": "Site estatico do projeto CodificADAs USP",
+  "private": true,
+  "scripts": {
+    "limpar": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\"",
+    "build": "npm run limpar && eleventy",
+    "serve": "eleventy --serve",
+    "migrate": "node scripts/migrate.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
+    "turndown": "^7.2.0"
+  }
+}

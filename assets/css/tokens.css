@@ -1,0 +1,33 @@
+:root {
+  /* Paleta de marca (Identidade Visual/Paleta de Cores) */
+  --color-blush: #d96690;
+  --color-pink: #f28dbc;
+  --color-mimi-pink: #f2c9e0;
+  --color-sky-blue: #86c2d9;
+  --color-electric-blue: #88e8f2;
+
+  /* Neutros de texto (derivados da mesma paleta oficial) */
+  --color-ink: #1f1f1f; /* Eerie Black — texto principal */
+  --color-ink-soft: #031c21; /* Dark Jungle Green — headings escuros */
+  --color-muted: #707070; /* Sonic Silver — texto auxiliar */
+
+  /* Fundo */
+  --color-paper: #fffdfc;
+  --color-paper-alt: #fff5fa;
+  --color-line: #f2c9e0;
+
+  /* Tipografia */
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  /* Altura do cabeçalho fixo — usada pela navegação interna e pelas âncoras */
+  /* cápsula do cabeçalho: logo 62px + paddings + folga da barra flutuante */
+  --altura-header: 104px;
+
+  /* Forma */
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 14px 32px -16px rgba(31, 31, 31, 0.25);
+  --container-max: 1240px;
+}

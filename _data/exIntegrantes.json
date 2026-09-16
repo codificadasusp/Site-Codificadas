@@ -1,0 +1,45 @@
+{
+  "_como_editar": "Cada grupo é um período do projeto. Para adicionar alguém, inclua um objeto em 'pessoas' com 'nome' e, opcionalmente, 'curso' e 'link' (Lattes, LinkedIn etc.). Campos vazios não aparecem no site.",
+
+  "grupos": [
+    {
+      "periodo": "2024 – 2025",
+      "pessoas": [
+        {
+          "nome": "Manuela Leite de Souza",
+          "curso": "Bacharelado em Física Médica",
+          "link": "https://www.linkedin.com/in/manuelaleite/"
+        },
+        {
+          "nome": "Thalia Angelo Gomes da Silva",
+          "curso": "Bacharelado em Ciência da Computação",
+          "link": "http://www.linkedin.com/in/thalia-silvaa"
+        }
+      ]
+    },
+    {
+      "periodo": "2023",
+      "pessoas": [
+        { "nome": "Victoria Giovanna dos Santos Novoa", "curso": "", "link": "" },
+        { "nome": "Cristine Airi Kimura", "curso": "", "link": "" }
+      ]
+    },
+    {
+      "periodo": "2022",
+      "pessoas": [
+        { "nome": "Marília Takaguti Dicezare", "curso": "", "link": "" },
+        { "nome": "Maysa Cristina Claudino da Silva", "curso": "", "link": "" },
+        { "nome": "Thalita Alves da Silva", "curso": "", "link": "" }
+      ]
+    },
+    {
+      "periodo": "2021",
+      "pessoas": [
+        { "nome": "Briza Mel Dias de Sousa", "curso": "", "link": "" },
+        { "nome": "Juan Carlos", "curso": "", "link": "" },
+        { "nome": "Mariela Hennies", "curso": "", "link": "" },
+        { "nome": "Widmila Mesquita Santos", "curso": "", "link": "" }
+      ]
+    }
+  ]
+}

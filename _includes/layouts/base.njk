@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}CodificADAs USP</title>
+  <meta name="description" content="{{ description or 'CodificADAs USP — inserindo meninas no mundo da programação.' }}">
+  <link rel="icon" href="/assets/img/logo/emblem-color.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="site-logo" href="/">
+        {# larguras cobrindo telas de alta densidade: 160 CSS px x2 e x3 #}
+        <img src="/assets/img/logo/logo-color.png" alt="CodificADAs USP" loading="eager" sizes="340px" eleventy:widths="340,510" eleventy:formats="webp,png">
+      </a>
+      {% include "partials/nav.njk" %}
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Abrir menu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <script src="/assets/js/nav.js"></script>
+  <script src="/assets/js/hero-scramble.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "_como_editar": "Para adicionar a foto de uma aluna: coloque o arquivo em assets/img/equipe/ e escreva o caminho em 'foto' (ex.: /assets/img/equipe/ana-sofia.png). Para o LinkedIn, preencha 'linkedin' com a URL completa. Campos deixados em branco simplesmente não aparecem no site.",
+
+  "coordenadora": {
+    "nome": "Profa. Dra. Kelly Rosa Braghetto",
+    "papel": "Coordenadora do CodificADAs",
+    "foto": "/assets/img/equipe/kelly.png",
+    "link": { "label": "Lattes", "url": "http://lattes.cnpq.br/5416099300504556" }
+  },
+
+  "alunas": [
+    {
+      "nome": "Ana Sofia Ribeiro Rossi",
+      "papel": "Bacharelado em Física — IF",
+      "foto": "",
+      "linkedin": ""
+    },
+    {
+      "nome": "Anely Mollo Cossio",
+      "papel": "Bacharelado em Ciência da Computação — IME",
+      "foto": "",
+      "linkedin": ""
+    },
+    {
+      "nome": "Julia Isabelly Silva",
+      "papel": "Estatística — IME",
+      "foto": "",
+      "linkedin": ""
+    }
+  ],
+
+  "agradecimentos": {
+    "professoras": [
+      { "nome": "Profa. Dra. Karina Valdivea Delgado", "link": "http://lattes.cnpq.br/8420771612707965" },
+      { "nome": "Profa. Dra. Renata Wasserman", "link": "http://lattes.cnpq.br/8548608291351316" },
+      { "nome": "Profa. Dra. Sarajane Marques Peres", "link": "" },
+      { "nome": "Profa. Dra. Sarita Mazzini Bruschi", "link": "http://lattes.cnpq.br/4694142315497364" },
+      { "nome": "Profa. Dra. Kalinka Regina Lucas Jaquie Castelo Branco", "link": "http://lattes.cnpq.br/3559042497669898" }
+    ]
+  },
+
+  "exIntegrantesUrl": "/o-projeto/ex-integrantes/"
+}

@@ -1,0 +1,15 @@
+<a class="post-card" href="{{ post.url }}">
+  {% if post.data.imagem %}
+  {# o card tem ~350px no desktop; sem este sizes o navegador baixa a versão grande à toa #}
+  <img src="{{ post.data.imagem }}" alt="" loading="lazy" sizes="(min-width: 800px) 350px, 100vw">
+  {% else %}
+  {# post sem capa: bloco da identidade visual, para o card não desalinhar #}
+  <span class="post-card-capa-vazia" aria-hidden="true"></span>
+  {% endif %}
+  <div class="post-card-body">
+    <span class="post-card-tag">{{ tagOverride or post.data.categorias[0] or "Blog" }}</span>
+    <h3>{{ post.data.title }}</h3>
+    <p>{{ post.data.resumo }}</p>
+    <span class="post-card-more">Leia mais &rarr;</span>
+  </div>
+</a>
